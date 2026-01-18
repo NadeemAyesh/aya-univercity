@@ -1,10 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة - مسابقة إعمار غزة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: "Alexandria", sans-serif; }
+        .bg-slate-800 { background-color: rgb(31 56 110) !important; }
+    </style>
 </head>
-<body>
-$END$
+<body class="bg-gray-50 text-slate-800 antialiased">
+<!-- Navbar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <div class="flex items-center justify-center border">
+                <img src="logo.svg" alt="" style="height: 50px;" />
+            </div>
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+            <a href="index.html" class="px-4 py-2.5 rounded-full border border-slate-200 text-slate-600 text-sm font-medium hover:border-slate-400 hover:text-slate-800 transition-colors bg-white">الرئيسية</a>
+            <a href="index.html#contact" class="px-4 py-2.5 rounded-full border border-slate-200 text-slate-600 text-sm font-medium hover:border-slate-400 hover:text-slate-800 transition-colors bg-white">تواصل معنا</a>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5scU-AaOSxylRB7SVb_pWyeLrfNgM4fwfn16O3ng8juT44Q/viewform" target="_blank"
+               class="px-5 py-3 rounded-full bg-blue-600 text-white text-xs font-medium hover:bg-blue-500 transition-colors shadow-lg shadow-blue-600/20">
+                اشترك في المسابقة
+            </a>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-32 pb-24">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-bold text-slate-800 mb-4">الأسئلة الشائعة</h1>
+            <p class="text-slate-600">كل ما تحتاج معرفته عن مسابقة إعمار غزة</p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <details class="bg-white border border-slate-200 rounded-lg p-6 hover:bg-gray-50 transition-colors shadow-sm">
+                <summary class="text-lg font-medium text-slate-800 cursor-pointer flex items-center justify-between">
+                    ما هي المسابقة وما هي أهدافها؟
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 text-right leading-relaxed">
+                    المسابقة هي تحدٍ عالمي يهدف إلى تطوير حلول جغرافية ذكية باستخدام تقنيات GIS والذكاء الاصطناعي لدعم جهود الإعمار والتدخل السريع الطارئ في قطاع غزة.
+                </p>
+            </details>
+
+            <!-- FAQ Item 2 -->
+            <details class="bg-white border border-slate-200 rounded-lg p-6 hover:bg-gray-50 transition-colors shadow-sm">
+                <summary class="text-lg font-medium text-slate-800 cursor-pointer flex items-center justify-between">
+                    كيف يمكنني التسجيل في المسابقة؟
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 text-right leading-relaxed">
+                    يمكنك التسجيل عبر موقع المسابقة من خلال زر "اشترك في المسابقة" المتاح في الصفحة الرئيسية.
+                </p>
+            </details>
+
+            <!-- ... باقي الأسئلة ... -->
+            <details class="bg-white border border-slate-200 rounded-lg p-6 hover:bg-gray-50 transition-colors shadow-sm">
+                <summary class="text-lg font-medium text-slate-800 cursor-pointer flex items-center justify-between">
+                    ما هي مواعيد المسابقة؟
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 text-right leading-relaxed">
+                    تبدأ المسابقة يوم السبت 17 يناير 2026. الموعد النهائي لتسليم المشاريع هو السبت، 21 فبراير 2026.
+                </p>
+            </details>
+        </div>
+    </div>
+</main>
+
+<script>
+    lucide.createIcons();
+    document.querySelectorAll('details').forEach(detail => {
+        const icon = detail.querySelector('i[data-lucide="chevron-down"]');
+        detail.addEventListener('toggle', () => {
+            icon.style.transform = detail.open ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+    });
+</script>
 </body>
 </html>

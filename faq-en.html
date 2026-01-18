@@ -1,10 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Gaza Reconstruction Competition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: "Alexandria", sans-serif; }
+        .bg-slate-800 { background-color: rgb(31 56 110) !important; }
+    </style>
 </head>
-<body>
-$END$
+<body class="bg-gray-50 text-slate-800 antialiased">
+<!-- Navbar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <div class="flex items-center justify-center border">
+                <img src="logo.svg" alt="" style="height: 50px;" />
+            </div>
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+            <a href="index-ltr.html" class="px-4 py-2.5 rounded-full border border-slate-200 text-slate-600 text-sm font-medium hover:border-slate-400 hover:text-slate-800 transition-colors bg-white">Home</a>
+            <a href="index-ltr.html#contact" class="px-4 py-2.5 rounded-full border border-slate-200 text-slate-600 text-sm font-medium hover:border-slate-400 hover:text-slate-800 transition-colors bg-white">Contact Us</a>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5scU-AaOSxylRB7SVb_pWyeLrfNgM4fwfn16O3ng8juT44Q/viewform" target="_blank"
+               class="px-5 py-3 rounded-full bg-blue-600 text-white text-xs font-medium hover:bg-blue-500 transition-colors shadow-lg shadow-blue-600/20">
+                Register Now
+            </a>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-32 pb-24">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-bold text-slate-800 mb-4">Frequently Asked Questions</h1>
+            <p class="text-slate-600">Everything you need to know about the Gaza Reconstruction Competition</p>
+        </div>
+
+        <div class="space-y-4">
+            <details class="bg-white border border-slate-200 rounded-lg p-6 hover:bg-gray-50 transition-colors shadow-sm">
+                <summary class="text-lg font-medium text-slate-800 cursor-pointer flex items-center justify-between">
+                    What is the competition and its objectives?
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 text-left leading-relaxed">
+                    The competition is a global challenge aiming to develop smart geographic solutions using GIS and AI technologies to support reconstruction efforts and emergency rapid intervention in the Gaza Strip.
+                </p>
+            </details>
+
+            <details class="bg-white border border-slate-200 rounded-lg p-6 hover:bg-gray-50 transition-colors shadow-sm">
+                <summary class="text-lg font-medium text-slate-800 cursor-pointer flex items-center justify-between">
+                    How can I register for the competition?
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 text-left leading-relaxed">
+                    You can register through the competition website by clicking the "Register Now" button available on the home page.
+                </p>
+            </details>
+
+            <details class="bg-white border border-slate-200 rounded-lg p-6 hover:bg-gray-50 transition-colors shadow-sm">
+                <summary class="text-lg font-medium text-slate-800 cursor-pointer flex items-center justify-between">
+                    What are the competition dates?
+                    <i data-lucide="chevron-down" class="w-5 h-5 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 text-left leading-relaxed">
+                    The competition starts on Saturday, January 17, 2026. The final deadline for project submission is Saturday, February 21, 2026.
+                </p>
+            </details>
+        </div>
+    </div>
+</main>
+
+<script>
+    lucide.createIcons();
+    document.querySelectorAll('details').forEach(detail => {
+        const icon = detail.querySelector('i[data-lucide="chevron-down"]');
+        detail.addEventListener('toggle', () => {
+            icon.style.transform = detail.open ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+    });
+</script>
 </body>
 </html>
