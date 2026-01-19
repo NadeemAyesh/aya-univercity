@@ -662,8 +662,11 @@
                 emailjs.sendForm('service_iqvavhj', 'template_0sh2yps', this)
                     .then(() => {
                         console.log('SUCCESS!');
+                        alert('تم ارسال الرسالة بنجاح! شكراً لك.');
+                        document.getElementById('contact-form').reset();
                     }, (error) => {
                         console.log('FAILED...', error);
+                        alert('حدث خطأ أثناء ارسال الرسالة. الرجاء المحاولة مرة أخرى.');
                     });
             });
         }

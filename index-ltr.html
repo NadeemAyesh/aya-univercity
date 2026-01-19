@@ -614,8 +614,11 @@
                 emailjs.sendForm('service_iqvavhj', 'template_0sh2yps', this)
                     .then(() => {
                         console.log('SUCCESS!');
+                        alert('Your message has been sent successfully!');
+                        document.getElementById('contact-form').reset();
                     }, (error) => {
                         console.log('FAILED...', error);
+                        alert('Failed to send the message. Please try again later.');
                     });
             });
         }
